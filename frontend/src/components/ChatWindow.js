@@ -53,7 +53,7 @@ function ChatWindow() {
   return (
       <div className="messages-container">
           {messages.map((message, index) => {
-            const formattedContent = message.content.replace(/\\boxed\{([\s\S]*)\}$/m, "$1");
+            const formattedContent = message.content.replace(/\\boxed\{([\s\S]*)\}$/m, "$1").replace(/[*`]/g, '').replace(/\n{2,}/g, '\n\n');
             return (
               <div key={index} className={`${message.role}-message-container`}>
                 {/* If this is an assistant message, display the robot icon */}
