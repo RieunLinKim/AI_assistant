@@ -53,6 +53,7 @@ function ChatWindow() {
   return (
       <div className="messages-container">
           {messages.map((message, index) => {
+            // Response Processing
             const formattedContent = message.content.replace(/\\boxed\{([\s\S]*)\}$/m, "$1").replace(/[*`]/g, '').replace(/\n{2,}/g, '\n\n');
             return (
               <div key={index} className={`${message.role}-message-container`}>

@@ -15,7 +15,7 @@ app.post('/api/get-ai-message', async (req, res) => {
   const { userQuery } = req.body;
 
   try {
-    // Call the OpenRouter API (Deepseek model)
+    // Call API (Deepseek R1)
     const deepseekResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {

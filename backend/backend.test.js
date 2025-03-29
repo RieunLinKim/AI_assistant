@@ -11,7 +11,7 @@ describe('POST /api/get-ai-message', () => {
     expect(response.statusCode).toBe(200);
     expect(response.body).toHaveProperty('role', 'assistant');
     expect(response.body).toHaveProperty('content');
-    // Optionally, log the content for inspection:
+    // log the content for inspection
     console.log('Installation inquiry response:', response.body.content);
   });
 

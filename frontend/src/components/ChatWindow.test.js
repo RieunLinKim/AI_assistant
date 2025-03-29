@@ -16,7 +16,7 @@ jest.mock('../api/api', () => ({
   }));
 
   test('mock getAIMessage works', async () => {
-    // Optionally, force the mock to resolve a value for this call:
+    // Force the mock to resolve a value for this call
     getAIMessage.mockResolvedValueOnce({
       role: "assistant",
       content: "This is a simulated response for: test query",
